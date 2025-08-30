@@ -2,9 +2,9 @@
 
 fecha=$(date +"%Y-%m-%d")
 
-mensaje="backup: notas actualizadas [$fecha]"
+mensaje="backup(PC): notas actualizadas [$fecha]"
 
-cd $HOME/Documentos/segundo_cerebro || exit
+cd /media/samuel/segcerebro || exit
 
 git add . 
 
