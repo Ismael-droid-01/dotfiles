@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /media/samuel/segcerebro || exit
+
+git pull
