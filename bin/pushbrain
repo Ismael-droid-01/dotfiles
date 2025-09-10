@@ -1,15 +1,15 @@
 #!/bin/bash
 
-fecha=$(date +"%Y-%m-%d")
+fecha=$(date +"%Y-%m-%d %H:%M")
 
 mensaje="backup(PC): notas actualizadas [$fecha]"
 
-cd /media/samuel/segcerebro || exit
+cd $HOME/Desktop/segundo-cerebro || exit
 
 git add . 
 
 git commit -m "$mensaje"
 
-git push
+git push origin main
 
 echo "$mensaje enviado al repositorio"
