@@ -8,8 +8,14 @@ cd $HOME/Desktop/segundo-cerebro || exit
 
 git add . 
 
-git commit -m "$mensaje"
+if git diff --cache --quiet; then
+	echo "No hay cambios nuevos por subir"
+else
+	git commit -m "$mensaje"
 
-git push origin main
-
-echo "$mensaje enviado al repositorio"
+	if git push origin main; then
+		echo "$mensaje enviado al repositorio"
+	else
+		echo "Error al hacer push, revisa tu conexion o posibles conflictos"
+	fi
+fi
