@@ -1,0 +1,15 @@
+[Unit]
+Description=Ejecutar pushbrain al salir de sesion
+Before=shutdown.target
+Before=exit.target
+After=network-online.target
+Requieres=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/true
+ExecStop=%h/.local/bin/pushbrain
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

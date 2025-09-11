@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd /media/samuel/segcerebro || exit
+cd $HOME/Desktop/segundo-cerebro || exit
 
 git pull

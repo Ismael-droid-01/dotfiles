@@ -1,0 +1,11 @@
+[Unit]
+Description=Ejecutar pullbrain al iniciar sesion
+After=default.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/pullbrain
+RemainAfterExit=no
+
+[Install]
+WantedBy=default.target
