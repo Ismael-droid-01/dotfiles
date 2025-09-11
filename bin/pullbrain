@@ -2,4 +2,16 @@
 
 cd $HOME/Desktop/segundo-cerebro || exit
 
-git pull
+# Obtencion de los cambios sin fusionar en mi rama local
+git fetch origin
+
+# Fusion de cambios en mi rama local
+git checkout main
+git pull origin main
+
+git checkout movil
+git pull origin movil
+
+git checkout main
+
+
