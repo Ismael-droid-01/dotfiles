@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $HOME/Desktop/segundo-cerebro || exit
+cd $HOME/segundo-cerebro || exit
 
 # Obtencion de los cambios sin fusionar en mi rama local
 git fetch origin

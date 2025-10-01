@@ -4,16 +4,16 @@ fecha=$(date +"%Y-%m-%d %H:%M")
 
 mensaje="backup(PC): notas actualizadas [$fecha]"
 
-cd $HOME/Desktop/segundo-cerebro || exit
+cd "$HOME/segundo-cerebro" || exit
 
-git add . 
+git add . > /dev/null 
 
-if git diff --cache --quiet; then
+if git diff --cached --quiet; then
 	echo "No hay cambios nuevos por subir"
 else
-	git commit -m "$mensaje"
+	git commit -m "$mensaje" > /dev/null
 
-	if git push origin main; then
+	if git push origin main > /dev/null; then
 		echo "$mensaje enviado al repositorio"
 	else
 		echo "Error al hacer push, revisa tu conexion o posibles conflictos"
