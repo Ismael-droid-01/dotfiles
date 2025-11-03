@@ -27,4 +27,16 @@ for service in ~/.config/systemd/user/*.service; do
     systemctl --user enable --now $(basename "$service")
 done
 
+echo "Configurando Neovim..."
+sudo apt update && sudo apt install -y neovim
+mkdir -p ~/.config
+
+# Falta detectar si existe una configuracion previa
+
+ln -s "$PWD/config/nvim" ~/.config/nvim
+
+# Instalar el gestor de paquetes
+git clone https://github.com/folke/lazy.nvim.git ~/.local/share/nvim/lazy/lazy.nvim
+
+
 echo "Instalacion completada"
