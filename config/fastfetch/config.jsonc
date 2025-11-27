@@ -1,0 +1,10 @@
+{
+    "logo": {
+        "type": "file",
+        "source": "~/.config/fastfetch/skull.txt",
+        "padding": {
+            "top": 1,
+            "left": 2
+        }
+    }
+}
